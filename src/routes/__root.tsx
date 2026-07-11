@@ -84,10 +84,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:description",
         content:
-          "Ingénieur fullstack — systèmes bancaires, OpenIMIS, administration réseaux. Basé à Moroni, Comores.",
+          "Portfolio de Mohamed Irsoid Abdou El-Anzize, ingénieur en application web basé aux Comores. Développement fullstack, systèmes bancaires, OpenIMIS et administration IT.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Mohamed Irsoid Abdou El-Anzize — Ingénieur en application web" },
+      { name: "twitter:description", content: "Portfolio de Mohamed Irsoid Abdou El-Anzize, ingénieur en application web basé aux Comores. Développement fullstack, systèmes bancaires, OpenIMIS et administration IT." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/936a3ea4-97f7-4165-922e-23a882198d37" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/936a3ea4-97f7-4165-922e-23a882198d37" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
