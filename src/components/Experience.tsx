@@ -43,14 +43,6 @@ const experiences: Exp[] = [
     tags: ["OpenIMIS", "HealthTech"],
   },
   {
-    role: "Formateur — Développeurs OpenIMIS",
-    company: "Projet PAAMG",
-    period: "Juil — Août 2024",
-    description:
-      "Formation de développeurs dans le cadre du Projet d'Appui à l'Assurance Maladie Généralisée (PAAMG).",
-    tags: ["Formation", "OpenIMIS"],
-  },
-  {
     role: "Ingénieur IT",
     company: "Uwezo — Comwork Partners",
     period: "Fév 2023 — Juil 2024",
