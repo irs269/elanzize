@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { ParticleField } from "./ParticleField";
-import orb from "@/assets/orb.png";
+import photoAsset from "@/assets/photo.png.asset.json";
 
 const roles = [
   "des applications web",
@@ -39,14 +39,20 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 mesh-bg" />
       <ParticleField className="pointer-events-none absolute inset-0 h-full w-full opacity-70" />
       <div className="pointer-events-none absolute -left-24 -top-24 h-[420px] w-[420px] rounded-full bg-primary/25 blur-[120px]" />
-      <img
-        src={orb}
-        alt=""
-        aria-hidden
-        width={1024}
-        height={1024}
-        className="pointer-events-none absolute -right-16 bottom-0 w-[520px] max-w-[80vw] opacity-70 mix-blend-screen float-slow md:right-[6%] md:w-[640px]"
-      />
+      <div className="pointer-events-none absolute -right-24 top-1/2 hidden -translate-y-1/2 lg:block">
+        <div className="relative h-[460px] w-[460px] xl:h-[520px] xl:w-[520px]">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 via-primary/10 to-transparent blur-2xl" />
+          <div className="absolute inset-3 overflow-hidden rounded-full border border-white/10 bg-background/40 shadow-2xl backdrop-blur-sm">
+            <img
+              src={photoAsset.url}
+              alt="Mohamed Irsoid Abdou El-Anzize"
+              width={848}
+              height={1264}
+              className="h-full w-full object-cover object-top"
+            />
+          </div>
+        </div>
+      </div>
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
 
       <div className="relative mx-auto w-full max-w-[1600px] px-5 pt-32 pb-24 md:px-10 md:pt-28">
