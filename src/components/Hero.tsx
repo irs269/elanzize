@@ -66,7 +66,7 @@ export function Hero() {
           <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
             Bonjour, je suis <span className="text-foreground">Mohamed Irsoid Abdou El-Anzize</span> —
             ingénieur en application web basé à Moroni, aux Comores. Certifié{" "}
-            <span className="font-mono text-primary">OpenIMIS</span>, j'intervienss de la conception
+            <span className="font-mono text-primary">OpenIMIS</span>, j'intervins de la conception
             à la mise en production sur des systèmes critiques : plateformes bancaires, applications
             mobiles et systèmes d'information de santé.
           </p>
