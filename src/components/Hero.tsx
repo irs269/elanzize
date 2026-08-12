@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import { ArrowDown, Download, Mail } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { ParticleField } from "./ParticleField";
+import orb from "@/assets/orb.png";
 
 const roles = [
-  "Ingénieur en application web",
-  "Développeur Système Bancaire",
-  "Expert OpenIMIS certifié",
-  "Administrateur systèmes & réseaux",
+  "des applications web",
+  "des systèmes bancaires",
+  "des plateformes OpenIMIS",
+  "des infrastructures fiables",
 ];
 
 export function Hero() {
@@ -32,115 +34,77 @@ export function Hero() {
   }, [text, deleting, roleIdx]);
 
   return (
-    <section id="accueil" className="relative min-h-screen overflow-hidden pt-28">
+    <section id="accueil" className="relative flex min-h-screen items-center overflow-hidden">
+      {/* Background layers */}
       <div className="pointer-events-none absolute inset-0 mesh-bg" />
-      <div className="pointer-events-none absolute inset-0 grid-bg opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]" />
-      <div className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/20 blur-[120px] float-slow" />
+      <ParticleField className="pointer-events-none absolute inset-0 h-full w-full opacity-70" />
+      <div className="pointer-events-none absolute -left-24 -top-24 h-[420px] w-[420px] rounded-full bg-primary/25 blur-[120px]" />
+      <img
+        src={orb}
+        alt=""
+        aria-hidden
+        width={1024}
+        height={1024}
+        className="pointer-events-none absolute -right-16 bottom-0 w-[520px] max-w-[80vw] opacity-70 mix-blend-screen float-slow md:right-[6%] md:w-[640px]"
+      />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
 
-      <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-24">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr] md:items-center">
-          <div className="reveal">
-            <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs font-mono text-muted-foreground">
-              <span className="h-2 w-2 rounded-full bg-emerald-400 pulse-dot" />
-              Disponible pour missions & collaborations
-            </div>
-
-            <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
-              Mohamed Irsoid<br />
-              <span className="text-gradient">Abdou El-Anzize</span>
-            </h1>
-
-            <div className="mt-6 flex items-baseline gap-1 font-mono text-lg text-muted-foreground min-h-[2rem]">
-              <span className="text-primary">$</span>
-              <span className="text-foreground">{text}</span>
-              <span className="cursor-blink h-5" />
-            </div>
-
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              Développeur fullstack basé à Moroni, aux Comores. Je conçois des applications
-              robustes — du système d'information bancaire aux plateformes de santé{" "}
-              <span className="font-mono text-foreground">OpenIMIS</span> — en combinant
-              ingénierie logicielle et administration systèmes.
-            </p>
-
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a
-                href="#contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90 glow"
-              >
-                <Mail className="h-4 w-4" />
-                Me contacter
-              </a>
-              <a
-                href="mailto:abdouelanzize95@gmail.com?subject=Demande de CV"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-white/5 px-5 py-3 text-sm font-medium transition hover:bg-white/10"
-              >
-                <Download className="h-4 w-4" />
-                Télécharger mon CV
-              </a>
-            </div>
-
-            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 font-mono text-xs text-muted-foreground">
-              <div><span className="text-primary">→</span> Moroni, Comores</div>
-              <div><span className="text-primary">→</span> FR · EN · AR</div>
-              <div><span className="text-primary">→</span> +269 435 98 72</div>
-            </div>
+      <div className="relative mx-auto w-full max-w-[1600px] px-5 pt-32 pb-24 md:px-10 md:pt-28">
+        <div className="max-w-2xl reveal">
+          <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-wider text-primary">
+            <span className="h-1.5 w-1.5 rounded-full bg-primary pulse-dot" />
+            Disponible pour missions & collaborations
           </div>
 
-          {/* Terminal card */}
-          <div className="reveal" style={{ animationDelay: "150ms" }}>
-            <div className="relative">
-              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary/30 via-primary/5 to-transparent blur-2xl" />
-              <div className="relative glass-strong rounded-2xl p-1 shadow-2xl">
-                <div className="flex items-center gap-1.5 px-4 py-3 border-b border-white/5">
-                  <span className="h-3 w-3 rounded-full bg-red-500/70" />
-                  <span className="h-3 w-3 rounded-full bg-yellow-500/70" />
-                  <span className="h-3 w-3 rounded-full bg-green-500/70" />
-                  <span className="ml-3 font-mono text-xs text-muted-foreground">~/portfolio</span>
-                </div>
-                <div className="p-5 font-mono text-[13px] leading-relaxed">
-                  <div className="text-muted-foreground">
-                    <span className="text-primary">const</span>{" "}
-                    <span className="text-foreground">dev</span> ={" "}
-                    <span className="text-foreground">{"{"}</span>
-                  </div>
-                  <div className="pl-4 text-muted-foreground">
-                    name: <span className="text-emerald-400">'Mohamed'</span>,
-                  </div>
-                  <div className="pl-4 text-muted-foreground">
-                    role: <span className="text-emerald-400">'Ingénieur Web'</span>,
-                  </div>
-                  <div className="pl-4 text-muted-foreground">
-                    stack: [
-                    <span className="text-emerald-400">'Python'</span>,{" "}
-                    <span className="text-emerald-400">'React'</span>,{" "}
-                    <span className="text-emerald-400">'Django'</span>],
-                  </div>
-                  <div className="pl-4 text-muted-foreground">
-                    domains: [
-                    <span className="text-emerald-400">'FinTech'</span>,{" "}
-                    <span className="text-emerald-400">'HealthTech'</span>],
-                  </div>
-                  <div className="pl-4 text-muted-foreground">
-                    focus: <span className="text-emerald-400">'reliability'</span>,
-                  </div>
-                  <div className="text-foreground">{"};"}</div>
-                  <div className="mt-3 text-primary">
-                    → <span className="text-muted-foreground">dev.build()</span>
-                    <span className="cursor-blink h-4" />
-                  </div>
-                </div>
-              </div>
-            </div>
+          <h1 className="mt-8 font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl md:text-7xl">
+            Je conçois
+            <br />
+            <span className="text-gradient">{text}</span>
+            <span className="cursor-blink h-9 md:h-12" />
+          </h1>
+
+          <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+            Bonjour, je suis <span className="text-foreground">Mohamed Irsoid Abdou El-Anzize</span> —
+            ingénieur en application web basé à Moroni, aux Comores. Certifié{" "}
+            <span className="font-mono text-primary">OpenIMIS</span>, j'intervienss de la conception
+            à la mise en production sur des systèmes critiques : plateformes bancaires, applications
+            mobiles et systèmes d'information de santé.
+          </p>
+
+          <div className="mt-12 flex items-center gap-6">
+            <a
+              href="#experiences"
+              className="group relative grid h-32 w-32 place-items-center rounded-full border border-white/15 transition hover:border-primary/60"
+              aria-label="Voir mes projets"
+            >
+              <span className="absolute inset-0 spin-slow">
+                <svg viewBox="0 0 128 128" className="h-full w-full">
+                  <defs>
+                    <path id="circlePath" d="M64,64 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" />
+                  </defs>
+                  <text className="fill-current font-mono text-[9px] uppercase tracking-[0.35em]">
+                    <textPath href="#circlePath">mes projets · mes projets ·</textPath>
+                  </text>
+                </svg>
+              </span>
+              <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1 group-hover:text-primary" />
+            </a>
+
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground transition hover:opacity-90 glow"
+            >
+              Me contacter
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+
+          <div className="mt-14 flex flex-wrap gap-x-8 gap-y-3 font-mono text-xs text-muted-foreground">
+            <div><span className="text-primary">→</span> Moroni, Comores</div>
+            <div><span className="text-primary">→</span> FR · EN · AR</div>
+            <div><span className="text-primary">→</span> +269 435 98 72</div>
           </div>
         </div>
-
-        <a
-          href="#apropos"
-          className="mt-16 inline-flex items-center gap-2 font-mono text-xs text-muted-foreground transition hover:text-foreground"
-        >
-          <ArrowDown className="h-3.5 w-3.5 animate-bounce" /> scroll
-        </a>
       </div>
     </section>
   );
