@@ -37,8 +37,8 @@ export function Contact() {
             <ContactLink
               icon={<Phone className="h-5 w-5" />}
               label="Téléphone"
-              value="+269 435 98 72"
-              href="tel:+26943598 72"
+              value="+269 38 99 87 2"
+              href="tel:+2693899872"
             />
             <ContactLink
               icon={<MapPin className="h-5 w-5" />}

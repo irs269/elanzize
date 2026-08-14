@@ -108,7 +108,7 @@ export function Hero() {
           <div className="mt-14 flex flex-wrap gap-x-8 gap-y-3 font-mono text-xs text-muted-foreground">
             <div><span className="text-primary">→</span> Moroni, Comores</div>
             <div><span className="text-primary">→</span> FR · EN · AR</div>
-            <div><span className="text-primary">→</span> +269 435 98 72</div>
+            <div><span className="text-primary">→</span> +269 38 99 87 2</div>
           </div>
         </div>
       </div>
