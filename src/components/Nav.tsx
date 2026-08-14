@@ -21,9 +21,9 @@ const links = [
 ];
 
 const socials = [
-  { href: "https://github.com/", label: "GitHub", icon: Github },
-  { href: "https://www.linkedin.com/", label: "LinkedIn", icon: Linkedin },
-  { href: "tel:+26943598 72", label: "Téléphone", icon: Phone },
+  { href: "https://github.com/irs269", label: "GitHub", icon: Github },
+  { href: "https://www.linkedin.com/in/mohamedirsoidabdouelanzize/", label: "LinkedIn", icon: Linkedin },
+  { href: "tel:+2693899872", label: "Téléphone", icon: Phone },
   { href: "mailto:abdouelanzize95@gmail.com", label: "Email", icon: Mail },
 ];
 
