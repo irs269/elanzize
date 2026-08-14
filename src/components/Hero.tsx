@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { ParticleField } from "./ParticleField";
-import photoAsset from "@/assets/photo.png.asset.json";
+import photoAsset from "@/assets/portrait.png.asset.json";
 
 const roles = [
   "des applications web",
@@ -39,18 +39,18 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 mesh-bg" />
       <ParticleField className="pointer-events-none absolute inset-0 h-full w-full opacity-70" />
       <div className="pointer-events-none absolute -left-24 -top-24 h-[420px] w-[420px] rounded-full bg-primary/25 blur-[120px]" />
-      <div className="pointer-events-none absolute -right-24 top-1/2 hidden -translate-y-1/2 lg:block">
-        <div className="relative h-[460px] w-[460px] xl:h-[520px] xl:w-[520px]">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 via-primary/10 to-transparent blur-2xl" />
-          <div className="absolute inset-3 overflow-hidden rounded-full border border-white/10 bg-background/40 shadow-2xl backdrop-blur-sm">
-            <img
-              src={photoAsset.url}
-              alt="Mohamed Irsoid Abdou El-Anzize"
-              width={848}
-              height={1264}
-              className="h-full w-full object-cover object-top"
-            />
-          </div>
+      {/* Portrait — cutout anchored to the bottom-right, clear of the side dock */}
+      <div className="pointer-events-none absolute bottom-0 right-20 hidden select-none lg:block xl:right-28">
+        <div className="relative">
+          <div className="absolute bottom-16 left-1/2 h-[380px] w-[380px] -translate-x-1/2 rounded-full bg-primary/25 blur-[110px] xl:h-[440px] xl:w-[440px]" />
+          <img
+            src={photoAsset.url}
+            alt="Mohamed Irsoid Abdou El-Anzize"
+            width={411}
+            height={610}
+            className="relative h-[68vh] max-h-[720px] w-auto object-contain object-bottom drop-shadow-[0_25px_60px_rgba(0,0,0,0.55)]"
+          />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background via-background/70 to-transparent" />
         </div>
       </div>
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
