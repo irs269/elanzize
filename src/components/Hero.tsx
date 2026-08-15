@@ -40,7 +40,7 @@ export function Hero() {
       <ParticleField className="pointer-events-none absolute inset-0 h-full w-full opacity-70" />
       <div className="pointer-events-none absolute -left-24 -top-24 h-[420px] w-[420px] rounded-full bg-primary/25 blur-[120px]" />
       {/* Portrait — cutout anchored to the bottom-right, clear of the side dock */}
-      <div className="pointer-events-none absolute bottom-10 right-16 hidden select-none lg:block xl:right-24">
+      <div className="pointer-events-none absolute bottom-0 right-16 hidden select-none lg:block xl:right-24">
         <div className="relative">
           <div className="absolute bottom-12 left-1/2 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-primary/25 blur-[90px] xl:bottom-16 xl:h-[360px] xl:w-[360px]" />
           <img
