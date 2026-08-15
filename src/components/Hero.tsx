@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { ParticleField } from "./ParticleField";
-import photoAsset from "@/assets/portrait.png.asset.json";
+import portrait from "@/assets/portrait.png";
 
 const roles = [
   "des applications web",
