@@ -69,7 +69,7 @@ export function Hero() {
             <span className="cursor-blink h-9 md:h-12" />
           </h1>
 
-          <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
             Bonjour, je suis <span className="text-foreground">Mohamed Irsoid Abdou El-Anzize</span> —
             ingénieur en application web basé à Moroni, aux Comores. Certifié{" "}
             <span className="font-mono text-primary">OpenIMIS</span>, j'interviens de la conception
