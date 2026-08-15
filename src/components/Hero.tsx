@@ -55,7 +55,7 @@ export function Hero() {
       </div>
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
 
-      <div className="relative mx-auto w-full max-w-[1600px] px-5 pt-32 pb-24 md:px-10 md:pt-28">
+      <div className="relative mx-auto w-full max-w-[1600px] px-5 pt-20 pb-16 md:px-10 md:pt-16">
         <div className="max-w-2xl reveal">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-wider text-primary">
             <span className="h-1.5 w-1.5 rounded-full bg-primary pulse-dot" />
