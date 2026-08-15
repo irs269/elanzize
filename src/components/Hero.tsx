@@ -48,7 +48,7 @@ export function Hero() {
             alt="Mohamed Irsoid Abdou El-Anzize"
             width={411}
             height={610}
-            className="relative h-[52vh] max-h-[520px] w-auto object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.55)]"
+            className="relative h-[44vh] max-h-[440px] w-auto object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.55)]"
           />
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background via-background/70 to-transparent" />
         </div>
