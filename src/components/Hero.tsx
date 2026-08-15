@@ -62,7 +62,7 @@ export function Hero() {
             Disponible pour missions & collaborations
           </div>
 
-          <h1 className="mt-8 font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl md:text-7xl">
+          <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl md:text-7xl">
             Je conçois
             <br />
             <span className="text-gradient">{text}</span>
