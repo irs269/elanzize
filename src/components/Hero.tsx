@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { ParticleField } from "./ParticleField";
-import photoAsset from "@/assets/portrait.png.asset.json";
+import portrait from "@/assets/portrait.png";
 
 const roles = [
   "des applications web",
@@ -44,7 +44,7 @@ export function Hero() {
         <div className="relative">
           <div className="absolute bottom-16 left-1/2 h-[380px] w-[380px] -translate-x-1/2 rounded-full bg-primary/25 blur-[110px] xl:h-[440px] xl:w-[440px]" />
           <img
-            src={photoAsset.url}
+            src={portrait}
             alt="Mohamed Irsoid Abdou El-Anzize"
             width={411}
             height={610}
