@@ -77,7 +77,7 @@ export function Hero() {
             mobiles et systèmes d'information de santé.
           </p>
 
-          <div className="mt-12 flex items-center gap-6">
+          <div className="mt-8 flex items-center gap-6">
             <a
               href="#experiences"
               className="group relative grid h-32 w-32 place-items-center rounded-full border border-white/15 transition hover:border-primary/60"
