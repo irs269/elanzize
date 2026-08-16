@@ -40,15 +40,15 @@ export function Hero() {
       <ParticleField className="pointer-events-none absolute inset-0 h-full w-full opacity-70" />
       <div className="pointer-events-none absolute -left-24 -top-24 h-[420px] w-[420px] rounded-full bg-primary/25 blur-[120px]" />
       {/* Portrait — cutout anchored to the bottom-right, clear of the side dock */}
-      <div className="pointer-events-none absolute top-32 right-16 hidden select-none lg:block xl:right-24">
-        <div className="relative">
-          <div className="absolute bottom-12 left-1/2 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-primary/25 blur-[90px] xl:bottom-16 xl:h-[360px] xl:w-[360px]" />
+      <div className="pointer-events-none absolute top-32 right-4 hidden select-none sm:right-8 md:right-12 lg:right-16 lg:block xl:right-20 2xl:right-24">
+        <div className="relative max-w-full">
+          <div className="absolute bottom-12 left-1/2 h-[220px] w-[220px] -translate-x-1/2 rounded-full bg-primary/25 blur-[90px] sm:bottom-14 sm:h-[260px] sm:w-[260px] md:bottom-16 md:h-[300px] md:w-[300px] lg:h-[340px] lg:w-[340px] xl:bottom-20 xl:h-[380px] xl:w-[380px] 2xl:h-[420px] 2xl:w-[420px]" />
           <img
             src={portrait}
             alt="Mohamed Irsoid Abdou El-Anzize"
             width={411}
             height={610}
-            className="relative h-[44vh] max-h-[440px] w-auto object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.55)]"
+            className="relative h-[34vh] max-h-[280px] w-auto max-w-full object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.55)] sm:h-[38vh] sm:max-h-[340px] md:h-[42vh] md:max-h-[400px] lg:h-[46vh] lg:max-h-[460px] xl:h-[50vh] xl:max-h-[520px] 2xl:h-[54vh] 2xl:max-h-[580px]"
           />
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background via-background/70 to-transparent" />
         </div>
