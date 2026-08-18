@@ -1,115 +1,128 @@
-import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
-import { ParticleField } from "./ParticleField";
 import portrait from "@/assets/portrait.png";
 
-const roles = [
-  "des applications web",
-  "des systèmes bancaires",
-  "des plateformes OpenIMIS",
-  "des infrastructures fiables",
-];
-
 export function Hero() {
-  const [text, setText] = useState("");
-  const [roleIdx, setRoleIdx] = useState(0);
-  const [deleting, setDeleting] = useState(false);
-
-  useEffect(() => {
-    const current = roles[roleIdx];
-    const speed = deleting ? 40 : 80;
-    const t = setTimeout(() => {
-      if (!deleting && text === current) {
-        setTimeout(() => setDeleting(true), 1600);
-        return;
-      }
-      if (deleting && text === "") {
-        setDeleting(false);
-        setRoleIdx((i) => (i + 1) % roles.length);
-        return;
-      }
-      setText(deleting ? current.slice(0, text.length - 1) : current.slice(0, text.length + 1));
-    }, speed);
-    return () => clearTimeout(t);
-  }, [text, deleting, roleIdx]);
-
   return (
-    <section id="accueil" className="relative flex min-h-screen items-center overflow-hidden">
-      {/* Background layers */}
-      <div className="pointer-events-none absolute inset-0 mesh-bg" />
-      <ParticleField className="pointer-events-none absolute inset-0 h-full w-full opacity-70" />
-      <div className="pointer-events-none absolute -left-24 -top-24 h-[420px] w-[420px] rounded-full bg-primary/25 blur-[120px]" />
-      {/* Portrait — cutout anchored to the bottom-right, clear of the side dock */}
-      <div className="pointer-events-none absolute top-32 right-4 hidden select-none sm:right-8 md:right-12 lg:right-16 lg:block xl:right-20 2xl:right-24">
-        <div className="relative max-w-full">
-          <div className="absolute bottom-12 left-1/2 h-[220px] w-[220px] -translate-x-1/2 rounded-full bg-primary/25 blur-[90px] sm:bottom-14 sm:h-[260px] sm:w-[260px] md:bottom-16 md:h-[300px] md:w-[300px] lg:h-[340px] lg:w-[340px] xl:bottom-20 xl:h-[380px] xl:w-[380px] 2xl:h-[420px] 2xl:w-[420px]" />
-          <img
-            src={portrait}
-            alt="Mohamed Irsoid Abdou El-Anzize"
-            width={411}
-            height={610}
-            className="relative h-[34vh] max-h-[280px] w-auto max-w-full object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.55)] sm:h-[38vh] sm:max-h-[340px] md:h-[42vh] md:max-h-[400px] lg:h-[46vh] lg:max-h-[460px] xl:h-[50vh] xl:max-h-[520px] 2xl:h-[54vh] 2xl:max-h-[580px]"
-          />
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background via-background/70 to-transparent" />
-        </div>
-      </div>
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
+    <section id="accueil" className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-24 lg:px-8">
+      <div className="pointer-events-none absolute inset-0 mesh-bg opacity-60" />
 
-      <div className="relative mx-auto w-full max-w-[1600px] px-5 pt-20 pb-16 md:px-10 md:pt-16">
-        <div className="max-w-2xl reveal">
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-wider text-primary">
-            <span className="h-1.5 w-1.5 rounded-full bg-primary pulse-dot" />
-            Disponible pour missions & collaborations
-          </div>
+      <div className="relative w-full max-w-6xl">
+        <div className="relative grid grid-cols-1 overflow-hidden border border-white/10 bg-surface shadow-2xl lg:grid-cols-12">
+          {/* Ambient glows */}
+          <div className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-primary/10 blur-[120px]" />
+          <div className="pointer-events-none absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-primary/5 blur-[120px]" />
 
-          <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl md:text-7xl">
-            Je conçois
-            <br />
-            <span className="text-gradient">{text}</span>
-            <span className="cursor-blink h-9 md:h-12" />
-          </h1>
-
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Bonjour, je suis <span className="text-foreground">Mohamed Irsoid Abdou El-Anzize</span> —
-            ingénieur en application web basé à Moroni, aux Comores. Certifié{" "}
-            <span className="font-mono text-primary">OpenIMIS</span>, j'interviens de la conception
-            à la mise en production sur des systèmes critiques : plateformes bancaires, applications
-            mobiles et systèmes d'information de santé.
-          </p>
-
-          <div className="mt-8 flex items-center gap-6">
-            <a
-              href="#experiences"
-              className="group relative grid h-32 w-32 place-items-center rounded-full border border-white/15 transition hover:border-primary/60"
-              aria-label="Voir mes projets"
-            >
-              <span className="absolute inset-0 spin-slow">
-                <svg viewBox="0 0 128 128" className="h-full w-full">
-                  <defs>
-                    <path id="circlePath" d="M64,64 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" />
-                  </defs>
-                  <text className="fill-current font-mono text-[9px] uppercase tracking-[0.35em]">
-                    <textPath href="#circlePath">mes projets · mes projets ·</textPath>
-                  </text>
-                </svg>
+          {/* Left content */}
+          <div className="relative z-10 flex flex-col justify-center border-b border-white/10 p-8 lg:col-span-7 lg:border-b-0 lg:border-r lg:p-16">
+            <div className="mb-8 flex items-center gap-3">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
+              <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+                Disponible pour missions & collaborations
               </span>
-              <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1 group-hover:text-primary" />
-            </a>
+            </div>
 
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground transition hover:opacity-90 glow"
-            >
-              Me contacter
-              <ArrowRight className="h-4 w-4" />
-            </a>
+            <h1 className="font-display text-5xl font-bold leading-[0.95] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+              Ingénieur en
+              <br />
+              <span className="text-primary">application web</span>
+            </h1>
+
+            <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
+              Bonjour, je suis{" "}
+              <span className="font-medium text-foreground">Mohamed Irsoid Abdou El-Anzize</span>{" "}
+              — basé à Moroni, aux Comores. Certifié{" "}
+              <span className="font-mono text-primary">OpenIMIS</span>, je conçois et déploie des
+              systèmes critiques : plateformes bancaires, applications mobiles et systèmes
+              d'information de santé.
+            </p>
+
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <a
+                href="#contact"
+                className="group inline-flex items-center gap-2 bg-primary px-8 py-4 text-sm font-bold uppercase tracking-wider text-primary-foreground transition hover:bg-primary/90"
+              >
+                Me contacter
+                <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+              </a>
+              <a
+                href="#experiences"
+                className="inline-flex items-center gap-2 border border-white/10 px-8 py-4 text-sm font-bold uppercase tracking-wider text-foreground transition hover:bg-white/5"
+              >
+                Voir mes projets
+              </a>
+            </div>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 font-mono text-xs text-muted-foreground">
-            <div><span className="text-primary">→</span> Moroni, Comores</div>
-            <div><span className="text-primary">→</span> FR · EN · AR</div>
-            <div><span className="text-primary">→</span> +269 38 99 87 2</div>
+          {/* Right technical grid */}
+          <div className="relative min-h-[480px] bg-background lg:col-span-5 lg:min-h-full">
+            {/* Grid pattern */}
+            <div
+              className="pointer-events-none absolute inset-0 opacity-[0.12]"
+              style={{
+                backgroundImage:
+                  "linear-gradient(rgba(232, 93, 58, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(232, 93, 58, 0.2) 1px, transparent 1px)",
+                backgroundSize: "32px 32px",
+              }}
+            />
+
+            {/* Portrait with glow */}
+            <div className="absolute inset-0 flex items-end justify-center overflow-hidden">
+              <div className="absolute -inset-8 bg-primary/10 blur-[90px]" />
+              <img
+                src={portrait}
+                alt="Mohamed Irsoid Abdou El-Anzize"
+                width={411}
+                height={610}
+                className="relative h-[56vh] max-h-[420px] w-auto object-contain opacity-95 drop-shadow-[0_20px_60px_rgba(0,0,0,0.8)] sm:h-[50vh] lg:h-[56vh]"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-transparent" />
+            </div>
+
+            {/* Info blocks */}
+            <div className="absolute inset-0 flex flex-col justify-between p-6 lg:p-8">
+              <div className="z-10 space-y-3">
+                <div className="glass p-4">
+                  <div className="mb-1 font-mono text-xs uppercase tracking-widest text-primary">
+                    Core Expertise
+                  </div>
+                  <div className="font-display text-base font-bold text-foreground lg:text-lg">
+                    Fullstack · OpenIMIS · DevOps
+                  </div>
+                </div>
+                <div className="glass translate-x-3 p-4 lg:translate-x-4">
+                  <div className="mb-1 font-mono text-xs uppercase tracking-widest text-primary">
+                    Terrain
+                  </div>
+                  <div className="font-display text-base font-bold text-foreground lg:text-lg">
+                    Comores · Madagascar · Mali
+                  </div>
+                </div>
+              </div>
+
+              <div className="z-10 grid grid-cols-2 gap-3 lg:gap-4">
+                <div className="glass p-4">
+                  <div className="font-display text-2xl font-bold text-foreground lg:text-3xl">7+</div>
+                  <div className="text-[10px] font-semibold uppercase tracking-tighter text-muted-foreground">
+                    Certifications
+                  </div>
+                </div>
+                <div className="glass p-4">
+                  <div className="font-display text-2xl font-bold text-foreground lg:text-3xl">3</div>
+                  <div className="text-[10px] font-semibold uppercase tracking-tighter text-muted-foreground">
+                    Pays d'intervention
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Decorative circles */}
+            <div className="pointer-events-none absolute top-1/2 left-1/2 h-48 w-48 -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary/20 spin-slow" />
+            <div className="pointer-events-none absolute top-1/2 left-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary/40 spin-slow-reverse" />
           </div>
+
+          {/* Bottom accent line */}
+          <div className="col-span-full h-1 bg-gradient-to-r from-primary via-surface to-background" />
         </div>
       </div>
     </section>

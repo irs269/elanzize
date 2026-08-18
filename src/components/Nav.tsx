@@ -48,8 +48,8 @@ export function Nav() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50">
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-5 py-6 md:px-10">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-5 py-5 md:px-10">
           <a href="#accueil" className="font-display text-lg font-bold tracking-[0.18em] uppercase">
             Mohamed <span className="font-light text-muted-foreground">El-Anzize</span>
           </a>
@@ -69,7 +69,7 @@ export function Nav() {
             </div>
             <a
               href="mailto:abdouelanzize95@gmail.com"
-              className="hidden rounded-full glass px-4 py-1.5 font-mono text-xs uppercase tracking-widest transition hover:border-primary/40 md:inline-block"
+              className="hidden border border-white/10 px-4 py-1.5 font-mono text-xs uppercase tracking-widest transition hover:border-primary/40 hover:bg-white/5 md:inline-block"
             >
               FR
             </a>
@@ -88,14 +88,14 @@ export function Nav() {
         </div>
 
         {open && (
-          <div className="mx-5 rounded-2xl glass-strong p-4 md:hidden">
+          <div className="mx-5 border border-white/10 bg-surface-elevated p-4 md:hidden">
             <nav className="flex flex-col gap-1">
               {links.map((l) => (
                 <a
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-muted-foreground hover:bg-white/5 hover:text-foreground"
+                  className="flex items-center gap-3 px-3 py-2 text-sm text-muted-foreground hover:bg-white/5 hover:text-foreground"
                 >
                   <l.icon className="h-4 w-4" /> {l.label}
                 </a>
@@ -106,7 +106,7 @@ export function Nav() {
       </header>
 
       {/* Vertical dock */}
-      <nav className="fixed right-4 top-1/2 z-50 hidden -translate-y-1/2 flex-col items-center gap-1 rounded-full glass-strong px-2 py-4 md:flex">
+      <nav className="fixed right-4 top-1/2 z-50 hidden -translate-y-1/2 flex-col items-center gap-3 rounded-full border border-white/10 bg-surface-elevated/80 px-2 py-4 backdrop-blur-md md:flex">
         {links.map((l) => {
           const isActive = active === l.href;
           return (
@@ -115,12 +115,12 @@ export function Nav() {
               href={l.href}
               aria-label={l.label}
               title={l.label}
-              className={`group relative grid h-10 w-10 place-items-center rounded-full transition ${
+              className={`group relative grid h-9 w-9 place-items-center rounded-full transition ${
                 isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              <l.icon className="h-[18px] w-[18px]" />
-              <span className="pointer-events-none absolute right-12 whitespace-nowrap rounded-md glass px-2 py-1 font-mono text-[11px] opacity-0 transition group-hover:opacity-100">
+              <l.icon className="h-[16px] w-[16px]" />
+              <span className="pointer-events-none absolute right-12 whitespace-nowrap border border-white/10 bg-surface-elevated px-2 py-1 font-mono text-[11px] opacity-0 transition group-hover:opacity-100">
                 {l.label}
               </span>
             </a>
