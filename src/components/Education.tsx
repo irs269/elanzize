@@ -50,7 +50,7 @@ export function Education() {
               <Award className="h-5 w-5 text-primary" />
               <h3 className="font-display text-xl font-semibold">Certifications & formations</h3>
             </div>
-            <div className="glass rounded-2xl p-5">
+            <div className="glass rounded-xl p-5">
               <ul className="space-y-3">
                 {certifications.map((c) => (
                   <li key={c} className="flex items-start gap-3 text-sm">

@@ -7,7 +7,7 @@ export function About() {
         <SectionHeader kicker="01 / à propos" title="Ingénieur, bâtisseur, formateur." />
 
         <div className="mt-14 grid gap-8 md:grid-cols-12">
-          <div className="md:col-span-7 space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+          <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:col-span-7 md:text-lg">
             <p>
               Développeur polyvalent, j'interviens sur l'ensemble du cycle de vie d'une
               application — de la conception à la mise en production — avec une prédilection
@@ -27,7 +27,7 @@ export function About() {
             </p>
           </div>
 
-          <div className="md:col-span-5 space-y-4">
+          <div className="space-y-4 md:col-span-5">
             <InfoCard icon={<Code2 className="h-5 w-5" />} title="Fullstack">
               Python · Java · React · Angular · Django · Symfony · Flutter
             </InfoCard>
@@ -66,9 +66,9 @@ function InfoCard({
   children: React.ReactNode;
 }) {
   return (
-    <div className="glass card-hover rounded-2xl p-5">
+    <div className="glass card-hover rounded-xl p-5">
       <div className="flex items-center gap-3">
-        <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary/10 text-primary">
+        <div className="grid h-10 w-10 place-items-center border border-primary/20 bg-primary/10 text-primary">
           {icon}
         </div>
         <div className="font-display font-semibold">{title}</div>
