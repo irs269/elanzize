@@ -61,7 +61,7 @@ function ContactPage() {
           {rows.map(({ icon: Icon, label, value, href }) => (
             <li key={label} className="glass rounded-xl p-4 transition-colors hover:border-primary/40">
               <div className="flex items-center gap-4">
-                <span className="grid h-10 w-10 place-items-center rounded-lg bg-primary/10 text-primary">
+                <span className="grid h-10 w-10 place-items-center border border-primary/20 bg-primary/10 text-primary">
                   <Icon className="h-4 w-4" />
                 </span>
                 <div className="min-w-0">

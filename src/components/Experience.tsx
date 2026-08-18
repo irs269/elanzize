@@ -87,14 +87,14 @@ export function Experience() {
                 }`}
               >
                 {/* Dot */}
-                <span className="absolute left-4 top-2 h-3 w-3 -translate-x-1/2 rounded-full bg-primary pulse-dot md:left-1/2" />
+                <span className="absolute top-2 left-4 h-3 w-3 -translate-x-1/2 rounded-full bg-primary pulse-dot md:left-1/2" />
 
                 <div
                   className={`pl-10 md:pl-0 ${
-                    i % 2 === 0 ? "md:pr-10 md:text-right" : "md:pl-10 md:col-start-2"
+                    i % 2 === 0 ? "md:pr-10 md:text-right" : "md:col-start-2 md:pl-10"
                   }`}
                 >
-                  <div className="glass card-hover rounded-2xl p-5">
+                  <div className="glass card-hover rounded-xl p-5">
                     <div className="font-mono text-xs text-primary">{exp.period}</div>
                     <h3 className="mt-2 font-display text-lg font-semibold">{exp.role}</h3>
                     <div className="mt-1 text-sm text-muted-foreground">{exp.company}</div>
@@ -106,7 +106,7 @@ export function Experience() {
                         {exp.tags.map((t) => (
                           <span
                             key={t}
-                            className="rounded-full border border-primary/20 bg-primary/10 px-2.5 py-0.5 font-mono text-[10px] text-primary"
+                            className="border border-primary/20 bg-primary/10 px-2.5 py-0.5 font-mono text-[10px] text-primary"
                           >
                             {t}
                           </span>

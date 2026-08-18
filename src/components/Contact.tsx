@@ -17,7 +17,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="relative py-24 md:py-32">
-      <div className="pointer-events-none absolute inset-0 mesh-bg opacity-40" />
+      <div className="pointer-events-none absolute inset-0 mesh-bg opacity-30" />
       <div className="relative mx-auto max-w-6xl px-4">
         <SectionHeader kicker="05 / contact" title="Un projet en tête ? Discutons-en." />
 
@@ -47,7 +47,7 @@ export function Contact() {
             />
           </div>
 
-          <form onSubmit={submit} className="glass-strong rounded-2xl p-6 space-y-4">
+          <form onSubmit={submit} className="glass-strong space-y-4 rounded-xl p-6">
             <Field
               label="Nom"
               value={form.name}
@@ -68,12 +68,12 @@ export function Contact() {
                 rows={5}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                className="mt-1.5 w-full rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2.5 text-sm outline-none transition focus:border-primary/60 focus:bg-white/[0.05]"
+                className="mt-1.5 w-full border border-white/10 bg-white/[0.03] px-3 py-2.5 text-sm outline-none transition focus:border-primary/60 focus:bg-white/[0.05]"
               />
             </div>
             <button
               type="submit"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90 glow"
+              className="inline-flex w-full items-center justify-center gap-2 bg-primary px-4 py-3 text-sm font-medium text-primary-foreground transition hover:bg-primary/90 glow"
             >
               <Send className="h-4 w-4" />
               {status === "sent" ? "Message préparé" : "Envoyer le message"}
@@ -105,7 +105,7 @@ function ContactLink({
 }) {
   const inner = (
     <div className="glass card-hover flex items-center gap-4 rounded-xl p-4">
-      <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary/10 text-primary">
+      <div className="grid h-10 w-10 place-items-center border border-primary/20 bg-primary/10 text-primary">
         {icon}
       </div>
       <div className="min-w-0">
@@ -140,7 +140,7 @@ function Field({
         required={required}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="mt-1.5 w-full rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2.5 text-sm outline-none transition focus:border-primary/60 focus:bg-white/[0.05]"
+        className="mt-1.5 w-full border border-white/10 bg-white/[0.03] px-3 py-2.5 text-sm outline-none transition focus:border-primary/60 focus:bg-white/[0.05]"
       />
     </div>
   );
