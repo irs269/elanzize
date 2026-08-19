@@ -108,7 +108,7 @@ export function Hero() {
                   </div>
                 </div>
                 <div className="glass p-4">
-                  <div className="font-display text-2xl font-bold text-foreground lg:text-3xl">3</div>
+                  <div className="font-display text-2xl font-bold text-foreground lg:text-3xl">4</div>
                   <div className="text-[10px] font-semibold uppercase tracking-tighter text-muted-foreground">
                     Pays d'intervention
                   </div>
