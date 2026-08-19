@@ -4,6 +4,7 @@ import {
   User,
   LayoutGrid,
   BarChart3,
+  Globe,
   GraduationCap,
   Mail,
   Github,
@@ -14,6 +15,7 @@ import {
 const links = [
   { href: "#accueil", label: "Accueil", icon: Home },
   { href: "#apropos", label: "À propos", icon: User },
+  { href: "#terrain", label: "Terrain", icon: Globe },
   { href: "#experiences", label: "Expériences", icon: LayoutGrid },
   { href: "#competences", label: "Compétences", icon: BarChart3 },
   { href: "#formation", label: "Formation", icon: GraduationCap },
