@@ -95,7 +95,7 @@ export function Hero() {
                     Terrain
                   </div>
                   <div className="font-display text-base font-bold text-foreground lg:text-lg">
-                    Comores · Madagascar · Mali
+                    Comores · Madagascar · Mali · Tanzanie
                   </div>
                 </div>
               </div>

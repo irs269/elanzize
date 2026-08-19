@@ -35,7 +35,7 @@ export function About() {
               Docker · Linux · Microtik · VPN · PostgreSQL
             </InfoCard>
             <InfoCard icon={<MapPin className="h-5 w-5" />} title="Terrain">
-              Comores · Madagascar · Mali
+              Comores · Madagascar · Mali · Tanzanie
             </InfoCard>
           </div>
         </div>
